@@ -1,6 +1,6 @@
+import { styled } from "styled-components";
 import { useLocalStorage } from "@/hooks/useLocalStorage";
-import { CartIcon } from "./assets/cart-icon";
-import styled from "styled-components";
+import { CartIcon } from "./icons/cart-icon";
 
 const CartCount = styled.span`
   width: 17px;
@@ -9,7 +9,7 @@ const CartCount = styled.span`
   padding: 0 5px;
   font-size: 10px;
 
-  background-color: #de3838;
+  background-color: var(--delete-color);
   color: white;
 
   margin-left: -10px;
@@ -20,12 +20,12 @@ const Container = styled.div`
 `;
 
 export function CartControl() {
-  const { value } = useLocalStorage("cart-items");
+  const { value } = useLocalStorage("cart-items", []);
 
   return (
-    <div>
+    <Container>
       <CartIcon />
-      {value?.length && <CartCount>{value.length}</CartCount>}
-    </div>
+      {value.length && <CartCount>{value.length}</CartCount>}
+    </Container>
   );
 }
