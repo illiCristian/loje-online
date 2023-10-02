@@ -2,8 +2,9 @@
   --border-radius: 12px;
   --logo-color:#5D5D6D;
   --bg-secondary:#F3F5F6;
-  --textos-dark-textos-apoio: #737380
-  --delete-color: #DE3838
+  --textos-dark-textos-apoio: #737380;
+  --delete-color: #DE3838;
+  --orange-low: #FFA585;
 }
 * {
   box-sizing: border-box;
